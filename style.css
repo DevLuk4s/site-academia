@@ -7,13 +7,14 @@
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style: none;
+    border: none;
     scroll-behavior: smooth;
 }
 
 :root{
     --bg-color: #000;
     --text-color: #fff;
-    --main-color: #ff0000;
+    --main-color: #fbff33;
 }
 
 body {
@@ -82,11 +83,65 @@ section {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url(img/home.jpg);
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(/img/home2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.home-text h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.home-text h2 {
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.home-text button {
+    width: 200px;
+    height: 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid white;
+    background-color: transparent;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin: 15px 5px;
+    position: relative;
+    transition: 1.5s;
+}
+
+.home-btn button:hover {
+    color: var(--main-color);
+    border: none;
+}
+
+.home-btn button:before {
+    content: ' ';
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 60px;
+    background-color: rgb(61, 61, 61);
+    z-index: -1;
+    transition: 1s;
+}
+
+.home-btn button:hover:before {
+    width: 100%;
 }
