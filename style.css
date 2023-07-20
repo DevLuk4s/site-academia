@@ -12,8 +12,9 @@
 }
 
 :root{
-    --bg-color: #000;
-    --text-color: #fff;
+    --bg-color: #111111;
+    --bg-segund-color: #0e0d0d;
+    --text-color: #ffffff;
     --main-color: #fbff33;
 }
 
@@ -144,4 +145,72 @@ section {
 
 .home-btn button:hover:before {
     width: 100%;
+}
+
+header.sticky {
+    background: var(--bg-color);
+    border: 1px solid #ffffff1a;
+    padding: 12px 15%;
+}
+
+/* about Nos */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-segund-color);
+    gap: 20px;
+}
+
+.about-text h1 {
+    font-size: 37px;
+}
+
+.about-text h1 span {
+    color: var(--main-color);
+}
+
+.about-text button {
+    display: inline-block;
+    padding: 12px 28px;
+    margin: 10px 0;
+    background: var(--main-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all .45s ease;
+}
+
+.about-text button:hover {
+    transform: scale(1.1);
+}
+
+/* Meu Serviços*/
+
+/* Adicionais */
+
+.whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+/* MediaQuery*/
+
+@media screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .about {
+        display: block;
+    }
 }
