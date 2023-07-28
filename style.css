@@ -23,7 +23,7 @@ body {
     color: var(--text-color);
 }
 
-/* Navbar é home */
+/* Navbar */
 
 header {
     position: fixed;
@@ -76,9 +76,7 @@ header {
     display: none;
 }
 
-section {
-    padding: 160px 10% 120px;
-}
+/* Home */
 
 .home {
     position: relative;
@@ -153,28 +151,50 @@ header.sticky {
     padding: 12px 15%;
 }
 
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
 /* about Nos */
 
 .about {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-content: center;
-    background: var(--bg-segund-color);
-    gap: 20px;
+    gap: 1.5rem;
 }
 
-.about-text h1 {
-    font-size: 37px;
+.about-img img {
+    width: 500px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
 }
 
-.about-text h1 span {
+.about-text h2 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.about-text h2 span {
     color: var(--main-color);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #ddd;
 }
 
 .about-text button {
     display: inline-block;
     padding: 12px 28px;
-    margin: 10px 0;
+    margin-top: 10px;
     background: var(--main-color);
     border-radius: 5px;
     color: var(--text-color);
@@ -190,7 +210,88 @@ header.sticky {
 
 /* Meu Serviços*/
 
+.container {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.price-row {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 25px;
+}
+
+.price-col {
+    padding: 10% 15%;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid #fbff33;
+}
+
+.price-col p {
+    font-size: 22px;
+}
+
+.price-col h3 {
+    font-size: 44px;
+    margin: 20px 0 40px;
+    font-weight: 500;
+}
+
+.price-col h3 span {
+    font-size: 16px;
+}
+
+.price-col ul {
+    text-align: left;
+    margin: 20px 0;
+    color: #ddd;
+}
+
+.price-col ul li {
+    margin: 15px 0;
+    color: #ddd;
+}
+
+.price-col button {
+    display: inline-block;
+    padding: 12px 28px;
+    margin: 10px 0;
+    background: var(--main-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all .45s ease;
+}
+
+.price-col button:hover {
+    transform: scale(1.1);
+}
+
+/* Contato */
+
+.contact h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
 /* Adicionais */
+
+section {
+    padding: 160px 10% 120px;
+}
 
 .whatsapp {
     position: fixed;
@@ -199,18 +300,39 @@ header.sticky {
     z-index: 1000;
 }
 
-/* MediaQuery*/
-
-@media screen and (max-width: 768px) {
-    .nav-list {
-        display: none;
+@media screen and (max-width: 1400px) {
+    
+    header {
+        padding: 12px 2.5%;
+        transition: .1s;
     }
 
-    #menu-icon {
-        display: block;
+    header.sticky {
+        padding: 10px 2.5%;
+        transition: .1s;
     }
 
+    section {
+        padding: 110 3% 60px;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+    
     .about {
-        display: block;
+        grid-template-columns: 1fr;
     }
+
+    .about-img {
+        text-align: center;
+        order: 2;
+    }
+
+    .about-img img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
 }
